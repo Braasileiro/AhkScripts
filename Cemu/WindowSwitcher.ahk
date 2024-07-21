@@ -11,8 +11,8 @@ WS_SIZEBOX := 0x40000
 
 CemuExe := 'Cemu.exe'
 TvWindowPrefix := 'Cemu '
-GamePadViewWidth := 0
-GamePadViewHeight := 0
+GamePadViewWidth := 854
+GamePadViewHeight := 480
 GamePadViewWindowPrefix := 'GamePad View'
 
 ^T:: {
@@ -30,8 +30,6 @@ GamePadViewWindowPrefix := 'GamePad View'
 
                 ; 854x480 (~16:9) is the Native Wii U GamePad resolution
                 ; Resolutions lower than this will cause cropping
-                global GamePadViewWidth := 854
-                global GamePadViewHeight := 480
                 WinMove(,, GamePadViewWidth, GamePadViewHeight)
 
                 ; Move (Bottom-Right)
