@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gamecontroller configversion="19" appversion="3.4.0">
+    <!--The SDL name for a joystick is included for informational purposes only.-->
+    <sdlname>Xbox 360 Controller</sdlname>
+    <!--The Unique ID for a joystick is included for informational purposes only.-->
+    <uniqueID>030097985e0400008e020000000072001118654</uniqueID>
+    <stickAxisAssociation index="1" xAxis="1" yAxis="2"/>
+    <stickAxisAssociation index="2" xAxis="3" yAxis="4"/>
+    <vdpadButtonAssociations index="1">
+        <vdpadButtonAssociation axis="0" button="12" direction="1"/>
+        <vdpadButtonAssociation axis="0" button="13" direction="4"/>
+        <vdpadButtonAssociation axis="0" button="14" direction="8"/>
+        <vdpadButtonAssociation axis="0" button="15" direction="2"/>
+    </vdpadButtonAssociations>
+    <names>
+        <controlstickname index="1">Stick 1</controlstickname>
+        <controlstickname index="2">Stick 2</controlstickname>
+    </names>
+    <sets>
+        <set index="1">
+            <name>TV Window</name>
+            <trigger index="5">
+                <throttle>positivehalf</throttle>
+            </trigger>
+            <trigger index="6">
+                <throttle>positivehalf</throttle>
+            </trigger>
+            <button index="6">
+                <setselect>2</setselect>
+                <setselectcondition>two-way</setselectcondition>
+                <slots>
+                    <slot>
+                        <path>C:/Program Files/AutoHotkey/v2/AutoHotkey64.exe</path>
+                        <arguments>D:/Git/Me/AhkScripts/Cemu/WindowSwitcher.ahk</arguments>
+                        <mode>execute</mode>
+                    </slot>
+                    <slot>
+                        <code>100</code>
+                        <mode>delay</mode>
+                    </slot>
+                    <slot>
+                        <slots>
+                            <slot>
+                                <code>0x1000021</code>
+                                <mode>keyboard</mode>
+                            </slot>
+                            <slot>
+                                <code>0x54</code>
+                                <mode>keyboard</mode>
+                            </slot>
+                        </slots>
+                        <mode>mix</mode>
+                    </slot>
+                </slots>
+            </button>
+        </set>
+        <set index="2">
+            <name>GamePad View</name>
+            <dpad index="1">
+                <dpadbutton index="4">
+                    <slots>
+                        <slot>
+                            <code>2</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </dpadbutton>
+                <dpadbutton index="1">
+                    <slots>
+                        <slot>
+                            <code>1</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </dpadbutton>
+                <dpadbutton index="2">
+                    <slots>
+                        <slot>
+                            <code>4</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </dpadbutton>
+                <dpadbutton index="8">
+                    <slots>
+                        <slot>
+                            <code>3</code>
+                            <mode>mousemovement</mode>
+                        </slot>
+                    </slots>
+                </dpadbutton>
+            </dpad>
+            <trigger index="5">
+                <throttle>positivehalf</throttle>
+            </trigger>
+            <trigger index="6">
+                <throttle>positivehalf</throttle>
+            </trigger>
+            <button index="10">
+                <slots>
+                    <slot>
+                        <code>1</code>
+                        <mode>mousebutton</mode>
+                    </slot>
+                </slots>
+            </button>
+            <button index="6">
+                <setselect>1</setselect>
+                <setselectcondition>two-way</setselectcondition>
+                <slots>
+                    <slot>
+                        <slots>
+                            <slot>
+                                <code>0x1000021</code>
+                                <mode>keyboard</mode>
+                            </slot>
+                            <slot>
+                                <code>0x54</code>
+                                <mode>keyboard</mode>
+                            </slot>
+                        </slots>
+                        <mode>mix</mode>
+                    </slot>
+                </slots>
+            </button>
+        </set>
+    </sets>
+</gamecontroller>
