@@ -2,7 +2,6 @@
 
 #Requires AutoHotkey v2.0
 #SingleInstance Ignore
-DetectHiddenWindows(true)
 
 WS_BORDER := 0x800000
 WS_CAPTION := 0xC00000
@@ -28,20 +27,14 @@ GamePadViewWindowPrefix := 'GamePad View'
                 WinSetStyle(-WS_DLGFRAME)
                 WinSetStyle(-WS_SIZEBOX)
 
-                ; 854x480 (~16:9) is the Native Wii U GamePad resolution
-                ; Resolutions lower than this will cause cropping
-                WinMove(,, GamePadViewWidth, GamePadViewHeight)
-
                 ; Move (Bottom-Right)
                 WinMove((A_ScreenWidth - GamePadViewWidth), (A_ScreenHeight - GamePadViewHeight))
             }
             
             ; Switch windows
             if (WinActive(TvWindowPrefix)) {
-                WinShow(GamePadViewWindowPrefix)
                 WinActivate(GamePadViewWindowPrefix)
             } else {
-                WinHide(GamePadViewWindowPrefix)
                 WinActivate(TvWindowPrefix)
             }
         }
